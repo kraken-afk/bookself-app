@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#0044ff" />
+  <title>Bookself App</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Bookself App</h1>
+
+    <nav class="nav">
+      <div class="anchor-nav">
+        <a to="home" class="home-nav active">Home</a>
+        <a to="add" class="add-nav">Add Book</a>
+      </div>
+
+      <form class="search-wrapper" id="form-search">
+        <input type="text" class="input-nav" placeholder="Search Book...">
+        <button class="input-btn">Search</button>
+      </form>
+    </nav>
+
+  </header>
+
+  <div class="main-wrapper">
+    <main class="main">
+
+      <div class="content">
+        <section class="search-section hidden">
+          <h2>Search result..</h2>
+
+          <div class="shelf" id="search-shelf">
+          </div>
+          <button class="card-btn delete-btn close">Close</button>
+        </section>
+
+        <section class="unfinished-section">
+          <h2>Unfinished book</h2>
+          <div class="shelf" id="unfinish"></div>
+        </section>
+
+        <section class="finished-section">
+          <h2>Finished book</h2>
+          <div class="shelf" id="finish"></div>
+        </section>
+
+      </div>
+
+      <form autocomplete="off" class="form">
+        <div class="input-wrapper">
+          <label for="input-title">Title</label>
+          <input required type="text" class="form-input title" name="title" id="input-title">
+        </div>
+        <div class="input-wrapper">
+          <label for="input-author">Author</label>
+          <input required type="text" class="form-input author" name="author" id="input-author">
+        </div>
+        <div class="input-wrapper">
+          <label for="input-year">Year</label>
+          <input required type="number" class="form-input year" name="year" id="input-year">
+        </div>
+        <div class="is-complete">
+          <input type="checkbox" name="is-complete" id="is-complete">
+          <label for="is-complete">finished</label>
+        </div>
+        <button class="card-btn submit-btn">Submit</button>
+      </form>
+
+    </main>
+  </div>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
